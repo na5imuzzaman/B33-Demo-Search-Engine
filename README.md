@@ -37,5 +37,28 @@ python3 manage.py runserver
 
 Visit [localhost](http://127.0.0.1:8000) to see the project live. Chill!
 
+## Usage
 
+ This website is deployed at [https://b33-se.herokuapp.com/](https://b33-se.herokuapp.com/)
+
+## User Interface
+
+**Admin/Staff Preview**
+![alt text](https://i.ibb.co/Gpps1SG/admin-preview.png)
+
+N.B. To get this option you must login using admin credential.
+
+```bash
+ Demo Credential
+ username: test_staff
+ password: 123456
+ ```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
+**If you have any issue with running this project, Feel free to knock me at [Facebook](https://www.messenger.com/t/md.na5imuzzaman)**
+
+Have a nice day!
 
