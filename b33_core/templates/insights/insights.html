@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/insights.css' %}"/>
+{% endblock %}
+
+{% block header %}
+
+    <div class="nav" style="margin-top:30px; margin-right:30px;">
+        <a style="margin-right:30px;" href="{% url 'search' %}">Search</a>
+        <a href="{% url 'logout' %} ">Log out</a>
+    <div>
+    
+    <div >
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+            <h4 class="center-align">Filter Keywords</h4>
+            <form id="filter" method='get' actiom='.' style="margin-left: 50px;">
+
+
+                {% comment %} < --! Filter by Occurance --> {% endcomment %}
+                <div>
+                    <h6 style="padding-top: 30px;">By Count</h6>
+                    <p>
+                        <label>
+                            <input name="found" value="0" type="radio" checked />
+                            <span>All</span>
+                        </label>
+                    </p>   
+                    <p>
+                        <label>
+                            <input name="found" value="20" type="radio" />
+                            <span>20+ times</span>
+                        </label>
+                    </p> 
+                    <p>
+                        <label>
+                            <input name="found" value="12" type="radio" />
+                            <span>12+ times</span>
+                        </label>
+                    </p>   
+                    <p>
+                        <label>
+                            <input name="found" value="8" type="radio" />
+                            <span>8+ times</span>
+                        </label>
+                    </p>       
+                </div>
+
+
+                {% comment %} < --! Filter by User --> {% endcomment %}
+                <div>
+                    <h6 style="padding-top: 30px;">By User</h6>
+
+                    {% for user in users %}
+                        <p>
+                            <label>
+                                <input type="checkbox" name="users" value={{user}} class="filled-in"  checked="checked"/>
+                                <span>{{ user }}</span>
+                            </label>
+                        </p>
+                    {% endfor %}     
+                    
+                </div>
+
+                {% comment %} < --! Filter by Search date --> {% endcomment %}
+                <div>
+                    <h6 style="padding-top: 30px;">By Time Range</h6>
+                    <p>
+                        <label>
+                            <input name="timeRange" value="201" type="radio" checked />
+                            <span>All</span>
+                        </label>
+                    </p>   
+
+                    <p>
+                        <label>
+                            <input name="timeRange" value="1" type="radio" />
+                            <span>Yesterday</span>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input name="timeRange" value="7" type="radio" />
+                            <span>Last Week</span>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input name="timeRange" value="30" type="radio" />
+                            <span>Last Month</span>
+                        </label>
+                    </p>
+                </div>                    
+            </form>
+
+        </ul>
+    </div>
+
+{% endblock header %}
+    
+
+{% block content %}
+
+    <div style=" margin-top:100px; margin-bottom:200px;">
+
+    <div class="row" class="margin:0;">
+        <div class="col m1 l2"></div>
+        <div class="col s12 m10 l8"> 
+            <table class="striped">
+            <thead>
+            <tr>
+                <th colspan="2">Keyword</th>
+                <th>Total Found</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for key, val in history.items %}
+            <tr>
+                    <td colspan="2">{{ key }} </td>
+                    <td>{{ val }}</td>
+            </tr>
+            {% endfor %}
+
+            
+            </tbody>
+            </table>
+        </div>
+        </div>
+    <div>
+{% endblock %}

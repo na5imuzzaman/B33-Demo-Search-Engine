@@ -1,0 +1,54 @@
+{% load static %}
+<!doctype html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %%}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+      {% block css %}
+      {% endblock %}
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="icon" type="image/png" href=" {% static 'image/favicon.png' %} "/>
+      {% block title %}
+        <title>B33 Demo Search Engine</title>
+      {% endblock %}
+    </head>
+
+    <body  style="margin: 0; background-color: #f4f6ff;">
+
+      <header class="page-header">
+        {% block header %}
+        {% endblock header %}
+      </header>
+      
+      <main class="page-main">
+      {% block content %}
+      {% endblock %}
+      </main>
+      
+      <footer class="page-footer">
+      {% block footer %}
+          <div class="footer-copyright">
+            <div class="container">
+            © 2020 all rights reserved
+                  <a class="grey-text text-lighten-4 right " href="mailto:nasim151127@gmail.com">Contact Developer</a>
+      
+            
+            {% comment %} made with 💜 by <a class="hide-on-small" href="https://github.com/nasimuzzaman-nasim">Nasim</a> {% endcomment %}
+            </div>
+          </div>
+      {% endblock %}
+      </footer>
+      
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js' %}"></script>
+      <script type="text/javascript" src=" {% static 'js/jquery.min.js' %} "></script>
+      <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    </body>
+  </html>

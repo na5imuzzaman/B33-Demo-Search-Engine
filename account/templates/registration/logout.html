@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block header %}
+    <div class="nav" style="margin-top:30px; margin-right:50px;">
+    <a style="margin-right:20px;" href="#">About</a>    
+        <a href="{% url 'login' %} ">Log in</a>
+    <div>
+{% endblock header %}
+
+{% block content %}
+    <h4 class="center-align" style="margin-top:100px;">Logged Out</h4>
+{% endblock content %}

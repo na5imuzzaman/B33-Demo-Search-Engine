@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block header %}
+    <div class="nav" style="margin-top:30px; margin-right:30px;">
+        {% if request.user.is_staff %}
+            <a style="margin-right:30px;" href="{% url 'insights' %}">Insights</a>
+        {% else %}
+            <a style="margin-right:30px;" href="#">About</a>
+        {% endif %}
+        <a href="{% url 'logout' %} ">Log out</a>
+    <div>
+{% endblock header %}
+
+
+{% block content %}
+    <div class="logo">
+            <img class="center-align" src="{% static 'image/logo.png' %}"></img>
+    </div>
+
+      <div class="container ">
+        <div class="row " style="margin-top: 10px;">
+            <div class="col m2 l3"></div>
+            <form id="searchForm" class="col s12 m8 l6" action='.' method='GET'>
+                <div class="row">
+                    <div class="input-field col s10">
+                        <input id="searchText" name="searchText" type="text" value="{{ data }}" class="validate" length="127">
+                        <label for="searchText">Search here...</label>
+                    </div>
+                    <button id="submitBtn" class="btn-floating btn-medium waves-effect waves-light pink" type="submit" value="submit"><i class="material-icons">search</i></button>
+                </div>
+            </form>
+        </div>
+        {% if data %}
+            <div class="row" style="margin-top:100px;">
+                <h5 class="center-align z-depth-5" style='padding:20px;'>Opps! Something went wrong.</h5>
+            </div>
+        {% endif %}
+      </div>
+{% endblock  %}
