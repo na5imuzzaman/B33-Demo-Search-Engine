@@ -2,9 +2,9 @@
 B33 is a demo search engine which is implement to filter search keyword.
 
 
-## Why The search Engine Named 'B33'(Bee)
+## Why The Search Engine Named 'B33'(Bee)
 
-Bee is one kind of insects who collect honey from different flowers and store. And we can easily fetch from there. Our Search engine works similar to a bee. It manages to find out the core of honey from a large amount of information of any type. And show it to us. that's why we named it 'B33' a.k.a. (Bee).
+Bee is one kind of insects who collect honey from different flowers and store. And we can easily fetch from there. Our Search engine works similar to a bee. It manages to find out the core of honey from a large amount of information of any type. And show it to us. That's why we named it 'B33' a.k.a. (Bee).
 
 
 
