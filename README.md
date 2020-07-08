@@ -1,12 +1,16 @@
 # B33-Demo-Search-Engine
-B33 is a demo search engine which is implement to filter search keyword.
+[B33](https://b33-se.herokuapp.com/) is a demo search engine which is implement to filter search keyword.
 
 
 ## Why The Search Engine Named 'B33'(Bee)
 
-Bee is one kind of insects who collect honey from different flowers and store. And we can easily fetch from there. Our Search engine works similar to a bee. It manages to find out the core of honey from a large amount of information of any type. And show it to us. That's why we named it 'B33' a.k.a. (Bee).
+Bee is one kind of insects who collect honey from different flowers and store. And we can fetch honey from there. Our Search engine works similar to a bee. It manages to find out the core of honey from a large amount of information of any type. And show it to us. That's why we named it 'B33' a.k.a. (Bee).
 
 
+## Importent Note
+
+1. If your search result shows ***"Oops! Something went wrong"***, Don't worry. It is designed to work that way. Because I don't implement any search engine in the Backend.
+2. Though this a responsive website, Some feature will not available on small screen devices.
 
 
 
@@ -36,6 +40,7 @@ python3 manage.py runserver
 ```
 
 Visit [localhost](http://127.0.0.1:8000) to see the project live. Chill!
+
 
 ## Usage
 
