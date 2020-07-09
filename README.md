@@ -10,7 +10,7 @@ Bee is one kind of insects who collect honey from different flowers and store. A
 ## Importent Note
 
 1. If your search result shows ***"Oops! Something went wrong"***, Don't worry. It is designed to work that way. Because I don't implement any search engine in the Backend.
-2. Though this a responsive website, Some feature will not available on small screen devices.
+2. Though this a responsive website, Some features will not available on small screen devices.
 
 
 
